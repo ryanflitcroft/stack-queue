@@ -4,12 +4,12 @@ export default class Queue {
   }
 
   enqueue(item) {
-    return this.queue.unshift(item);
+    return this.queue.push(item);
   }
 
   dequeue() {
     if (this.hasNext()) {
-      return this.queue.pop();
+      return this.queue.shift();
     } else return null;
   }
 
@@ -18,16 +18,16 @@ export default class Queue {
   }
 }
 
-const queue = new Queue();
-queue.enqueue('fox');
-queue.enqueue('goose');
-queue.enqueue('lizard');
-console.log(queue.dequeue()); // 'fox'
-console.log(queue.hasNext()); // true
-console.log(queue.dequeue()); // 'goose'
-queue.enqueue('llama');
-console.log(queue.dequeue()); // 'lizard'
-console.log(queue.hasNext()); // true
-console.log(queue.dequeue()); // 'llama'
-console.log(queue.hasNext()); // false
-console.log(queue.dequeue()); // null
+// const queue = new Queue();
+// queue.enqueue('fox');
+// queue.enqueue('goose');
+// queue.enqueue('lizard');
+// console.log(queue.dequeue()); // 'fox'
+// console.log(queue.hasNext()); // true
+// console.log(queue.dequeue()); // 'goose'
+// queue.enqueue('llama');
+// console.log(queue.dequeue()); // 'lizard'
+// console.log(queue.hasNext()); // true
+// console.log(queue.dequeue()); // 'llama'
+// console.log(queue.hasNext()); // false
+// console.log(queue.dequeue()); // null
