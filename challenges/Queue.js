@@ -1,6 +1,7 @@
 export default class Queue {
   constructor() {
     this.queue = [];
+    this.index = 0;
   }
 
   enqueue(item) {
@@ -8,11 +9,18 @@ export default class Queue {
   }
 
   dequeue() {
-    return this.queue.length ? this.queue.shift() : null;
+    const item = this.queue[this.index];
+    if (!this.hasNext()) return null;
+    this.index++;
+    return item;
   }
 
   hasNext() {
-    return !!this.queue.length;
+    return !!(this.queue.length - this.index);
+  }
+
+  get size() {
+    return this.queue.length - this.index;
   }
 }
 
@@ -29,3 +37,4 @@ console.log(queue.hasNext()); // true
 console.log(queue.dequeue()); // 'llama'
 console.log(queue.hasNext()); // false
 console.log(queue.dequeue()); // null
+console.log(queue.size);
