@@ -24,6 +24,8 @@ export default class Queue {
   }
 }
 
+console.log([1, 2].at(-1));
+
 // const queue = new Queue();
 // queue.enqueue('fox');
 // queue.enqueue('goose');

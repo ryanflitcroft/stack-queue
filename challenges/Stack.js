@@ -20,18 +20,18 @@ export default class Stack {
   }
 }
 
-const stack = new Stack();
-stack.push('fox');
-stack.push('goose');
-stack.push('lizard');
+// const stack = new Stack();
+// stack.push('fox');
+// stack.push('goose');
+// stack.push('lizard');
 
-console.log(stack);
-console.log(stack.pop());
-console.log(stack.peek());
-console.log(stack.pop());
-stack.push('llama');
-console.log(stack.pop());
-console.log(stack.peek());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.size);
+// console.log(stack);
+// console.log(stack.pop());
+// console.log(stack.peek());
+// console.log(stack.pop());
+// stack.push('llama');
+// console.log(stack.pop());
+// console.log(stack.peek());
+// console.log(stack.pop());
+// console.log(stack.pop());
+// console.log(stack.size);
