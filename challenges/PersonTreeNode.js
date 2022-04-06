@@ -32,15 +32,11 @@ export default class PersonTreeNode {
 
     if (name === this.value) {
       return this.person;
-    } 
-    if (name < this.value) {
-        this.left.findPerson(name);
-      } else {
-        if (name > this.value) {
-          this.right.findPerson(name);
-        }
-      }
     }
+
+    const dir = name < this.value ? 'left' : 'right';
+    if (!this[dir]) return null;
+    return this[dir].findPerson(name);
   }
   //
 }
