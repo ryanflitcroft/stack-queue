@@ -32,3 +32,5 @@ const D = new BinaryTreeNode('D');
 B.add(A);
 B.add(D);
 B.add(C);
+
+console.log(B);
